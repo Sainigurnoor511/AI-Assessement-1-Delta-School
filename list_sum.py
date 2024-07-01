@@ -3,19 +3,21 @@
 #
 # Author: Gurnoor Singh Saini
 
-list_of_num=[]
-
-n = int(input("Enter number of elements :"))
-print("Enter the elements :")
-
-for i in range (n):
-    x = int(input())
-    list_num.append(x)
-
 def sum_of_list(list_num):
     sum = 0
     for num in list_num:
         sum += num
+    print("List :", list_num)
     print("Sum :", sum)
+
+list_num=[]
+
+n = int(input("Enter number of elements :"))
+
+for i in range (n):
+    print(f"Enter the {i+1} element :")
+    x = int(input())
+    list_num.append(x)
+
 
 sum_of_list(list_num)
