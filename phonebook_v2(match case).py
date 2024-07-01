@@ -6,21 +6,28 @@ phonebook = {}
 
 def add_contact(name, number):
     phonebook[name] = number
-    print(f"Contact '{name}' with number '{number}' added successfully.")
+    print(f"Contact '{name}' with number '{number}' added successfully.\n")
 
 def search_contact(name):
     if name in phonebook:
-        print(f"Contact '{name}' found. Number: {phonebook[name]}")
+        print(f"Contact '{name}' found, Number: {phonebook[name]}\n")
     else:
-        print(f"Contact '{name}' not found.")
+        print(f"Contact '{name}' not found.\n")
 
 def delete_contact(name):
     if name in phonebook:
         del phonebook[name]
-        print(f"Contact '{name}' deleted successfully.")
+        print(f"Contact '{name}' deleted successfully.\n")
     else:
-        print(f"Contact '{name}' not found.")
+        print(f"Contact '{name}' not found.\n")
 
+def show_contacts():
+    if not phonebook:
+        print("Phone book is empty.\n")
+    else:
+        print("Phonebook Contacts:")
+        for name, number in phonebook.items():
+            print(f"Name: {name}, Number: {number}\n")
 
 while True:
     print("1. Add contact")
@@ -43,7 +50,7 @@ while True:
             name = input("Enter contact name: ")
             delete_contact(name)
         case "4":
-            print(phonebook)
+            show_contacts()
         case "5":
             print("Exiting program...")
             exit()

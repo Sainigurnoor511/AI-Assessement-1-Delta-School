@@ -7,8 +7,7 @@ def sum_of_list(list_num):
     sum = 0
     for num in list_num:
         sum += num
-    print("List :", list_num)
-    print("Sum :", sum)
+    return sum
 
 list_num=[]
 
@@ -19,5 +18,5 @@ for i in range (n):
     x = int(input())
     list_num.append(x)
 
-
-sum_of_list(list_num)
+print("List of elements :" , list_num)
+print("Sum of elements :" , sum_of_list(list_num))

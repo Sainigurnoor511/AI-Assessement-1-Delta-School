@@ -6,11 +6,11 @@ import random
 
 def guess_game():
     
-    target_number = random.randint(1, 10)
+    target_number = random.randint(1, 50)
     
     lower_bound = 1
-    upper_bound = 10
-    max_attempts = 5
+    upper_bound = 50
+    max_attempts = 10
     attempts = 0
     
     while attempts < max_attempts:
@@ -19,7 +19,7 @@ def guess_game():
         guess = (lower_bound + upper_bound) // 2
         
         print(f"Attempt {attempts}:")
-        user_guess = int(input("Guess the number between 1 to 10: "))
+        user_guess = int(input("Guess the number between 1 to 50: "))
 
         if user_guess == target_number:
             print("Congratulations! You guessed the number")
