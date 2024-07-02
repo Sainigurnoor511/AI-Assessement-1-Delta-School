@@ -27,7 +27,7 @@ def calculator():
     else:
         print("Invalid operator")
 
-    again() #create a function to ask if the user wants to calculate again
+    again() #calling function to ask if the user wants to calculate again
 
 
 def again():
