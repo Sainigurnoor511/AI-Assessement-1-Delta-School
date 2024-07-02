@@ -1,4 +1,4 @@
-# Simple phone book application (add contacts, search by name, delete contacts)
+# Simple phonebook application version 2 using match case
 #
 # Author: Gurnoor Singh Saini
 
