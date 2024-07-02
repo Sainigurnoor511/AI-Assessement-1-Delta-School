@@ -1,54 +1,42 @@
-# Basic Calculator
-#
-# Author: Gurnoor Singh Saini
+def calculator():
+    print("Please type in the math operation you would like to complete:")
+    print("+ for addition")
+    print("- for subtraction")
+    print("* for multiplication")
+    print("/ for division")
+    operation = input()
 
-def add(num1, num2):
-    return num1 + num2
+    number_1 = int(input("Please enter the first number: "))
+    number_2 = int(input("Please enter the second number: "))
 
-def subtract(num1, num2):
-    return num1 + num2
+    if operation == "+":
+        print(f"{number_1} + {number_2} = {number_1 + number_2}")
 
-def multiply(num1, num2):
-    return num1 * num2
+    elif operation == "-":
+        print(f"{number_1} - {number_2} = {number_1 - number_2}")
 
-def divide(num1, num2):
-    if num2 != 0:
-        return num1 / num2
+    elif operation == "*":
+        print(f"{number_1} * {number_2} = {number_1 * number_2}")
+
+    elif operation == "/":
+        print(f"{number_1} / {number_2} = {number_1 / number_2}")
+
     else:
-        return "UNDIFINED: Division by zero is not possible."
+        print("Invalid operator")
 
-while True:
-    print("Select operation:")
-    print("1. Addition")
-    print("2. Subtraction")
-    print("3. Multiplication")
-    print("4. Division")
-    print("5. Exit")
+    again() #create a function to ask if the user wants to calculate again
 
-    choice = input("Enter choice: ")
 
-    
+def again():
+    print("Do you want to calculate again?")
+    print("Type Y for yes or N for no.")
+    calc_again = input()
 
-    if choice == '1':
-        num1 = float(input("Enter first number: "))
-        num2 = float(input("Enter second number: "))
-        result = add(num1, num2)
-    elif choice == '2':
-        num1 = float(input("Enter first number: "))
-        num2 = float(input("Enter second number: "))
-        result = subtract(num1, num2)
-    elif choice == '3':
-        num1 = float(input("Enter first number: "))
-        num2 = float(input("Enter second number: "))
-        result = multiply(num1, num2)
-    elif choice == '4':
-        num1 = float(input("Enter first number: "))
-        num2 = float(input("Enter second number: "))
-        result = divide(num1, num2)
-    elif choice == '5':
-        exit()
+    if calc_again.upper() == "Y":
+        calculate()
+    elif calc_again.upper() == "N":
+        print()
     else:
-        print("Invalid input")
-        continue
+        again()
 
-    print("Result:", result , "\n")
+calculator()
