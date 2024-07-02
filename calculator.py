@@ -6,20 +6,23 @@ def calculator():
     print("/ for division")
     operation = input()
 
-    number_1 = int(input("Please enter the first number: "))
-    number_2 = int(input("Please enter the second number: "))
+    num1 = int(input("Please enter the first number: "))
+    num2 = int(input("Please enter the second number: "))
 
     if operation == "+":
-        print(f"{number_1} + {number_2} = {number_1 + number_2}")
+        print(f"{num1} + {num2} = {num1 + num2}")
 
     elif operation == "-":
-        print(f"{number_1} - {number_2} = {number_1 - number_2}")
+        print(f"{num1} - {num2} = {num1 - num2}")
 
     elif operation == "*":
-        print(f"{number_1} * {number_2} = {number_1 * number_2}")
+        print(f"{num1} * {num2} = {num1 * num2}")
 
     elif operation == "/":
-        print(f"{number_1} / {number_2} = {number_1 / number_2}")
+        if num2 != 0:
+            print(f"{num1} / {num2} = {num1 / num2}")
+        else:
+            print("UNDIFINED: Division by zero is not possible.")
 
     else:
         print("Invalid operator")
