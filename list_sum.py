@@ -10,7 +10,6 @@ def sum_of_list(list_num):
     return sum
 
 list_num=[]
-
 n = int(input("Enter number of elements :"))
 
 for i in range (n):
